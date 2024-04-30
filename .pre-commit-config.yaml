@@ -1,0 +1,15 @@
+repos:
+  - repo: https://github.com/PyCQA/flake8
+    rev: 7.0.0
+    hooks:
+    - id: flake8
+      exclude: ^(venv|alembic)/
+
+  - repo: local
+    hooks:
+    - id: requirements
+      name: requirements
+      language: system
+      entry: bash -c "pip3 freeze > requirements.txt; git add requirements.txt"
+      pass_filenames: false
+      stages: [commit]

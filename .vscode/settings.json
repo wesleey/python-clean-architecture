@@ -1,0 +1,11 @@
+{
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/.pytest_cache": true,
+  },
+  "[python]": {
+    "editor.rulers": [
+      90
+    ]
+  }
+}
